@@ -1,0 +1,70 @@
+<h2 class="guizTitle">{{name}}</h2>
+<form action="" class="quizeForm">
+    <ul class="quizList">
+        {{#each items}}
+        <li class="questionItem">
+            <h3 class="questionTitle">Question-{{this.id}} - {{this.question}}</h3>
+            <ul class="answerList">
+                {{#each this.choices}}
+                <li class="answerItem">
+                    <label>
+                        <input type="checkbox" name="question_{{@root.items.id}}" id="answer_{{@index}}" />
+                        {{this}}
+                    </label>
+                </li>
+                {{/each}}
+            </ul>
+        </li>
+        {{/each}}
+    </ul>
+    <button type='submit'>Submit</button>
+</form>
+
+
+      <!-- <form action="#" class="quiz__form">
+        <h2 class="quiz__title">Some Quiz</h2>
+        <section class="quiz__item">
+          <h3 class="quiz__question">Question - 1</h3>
+          <ul class="question__list">
+            <li class="question__item">
+              <input type="checkbox" name="question-1" id="q1_a1" />
+              <label for="q1_a1">Answer - 1</label>
+            </li>
+            <li class="question__item">
+              <input type="checkbox" name="question-1" id="q1_a2" />
+              <label for="q1_a2">Answer - 2</label>
+            </li>
+            <li class="question__item">
+              <input type="checkbox" name="question-1" id="q1_a3" />
+              <label for="q1_a3">Answer - 3</label>
+            </li>
+            <li class="question__item">
+              <input type="checkbox" name="question-1" id="q1_a4" />
+              <label for="q1_a4">Answer - 4</label>
+            </li>
+          </ul>
+        </section>
+        <section class="quiz__item">
+          <h3 class="quiz__question">Question - 2</h3>
+          <ul class="question__list">
+            <li class="question__item">
+              <input type="checkbox" name="question-2" id="q2_a1" />
+              <label for="q2_a1">Answer - 1</label>
+            </li>
+            <li class="question__item">
+              <input type="checkbox" name="question-2" id="q2_a2" />
+              <label for="q2_a2">Answer - 2</label>
+            </li>
+            <li class="question__item">
+              <input type="checkbox" name="question-2" id="q2_a3" />
+              <label for="q2_a3">Answer - 3</label>
+            </li>
+            <li class="question__item">
+              <input type="checkbox" name="question-2" id="q2_a4" />
+              <label for="q2_a4">Answer - 4</label>
+            </li>
+          </ul>
+        </section>
+        <button type="submit">Submit</button>
+      </form> -->
+    

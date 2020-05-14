@@ -1,0 +1,13 @@
+{{#each @root}}
+<section class="quiz__item">
+    <h3 class="quiz__question">{{question}}</h3>
+    <ul class="question__list">
+        {{#each choices}}
+        <li class="question__item">
+            <input type="checkbox" name="question-{{data}}" id="q1_a{{@index}}" />
+            <label for="q1_a{{@index}}">{{this}}</label>
+        </li>
+        {{/each}}
+    </ul>
+</section>
+{{/each}}
